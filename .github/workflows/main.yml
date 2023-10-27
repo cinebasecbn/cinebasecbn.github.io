@@ -3,7 +3,7 @@ name: Deploy API-enabled Code
 on:
   push:
     branches:
-      - main  # Adjust this branch as needed
+      - main
 
 jobs:
   deploy:
@@ -16,10 +16,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 14  # Adjust the Node.js version as needed
+        node-version: 16
 
     - name: Install Dependencies
-      run: npm install  # Modify this if you're using a different package manager
+      run: npm install
 
     - name: Set up Environment
       run: |
@@ -27,4 +27,4 @@ jobs:
         echo "YOUTUBEAPIKEY=${{ secrets.YOUTUBEAPIKEY }}" >> .env
 
     - name: Deploy
-      run: npm start  # Replace with the command to start your application
+      run: npm start

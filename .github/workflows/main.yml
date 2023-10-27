@@ -1,0 +1,30 @@
+name: Deploy API-enabled Code
+
+on:
+  push:
+    branches:
+      - main  # Adjust this branch as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14  # Adjust the Node.js version as needed
+
+    - name: Install Dependencies
+      run: npm install  # Modify this if you're using a different package manager
+
+    - name: Set up Environment
+      run: |
+        echo "KEY=${{ secrets.KEY }}" >> .env
+        echo "YOUTUBEAPIKEY=${{ secrets.YOUTUBEAPIKEY }}" >> .env
+
+    - name: Deploy
+      run: npm start  # Replace with the command to start your application

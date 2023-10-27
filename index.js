@@ -9,7 +9,7 @@ const youtubeApiKey = process.env.YOUTUBEAPIKEY;
 // Function to fetch data from API
 let getMovie = () => {
     let movieName = movieNameRef.value;
-    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${KEY}`;
+    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
     
     // If input field is empty
     if (movieName.length <= 0) {
@@ -18,7 +18,7 @@ let getMovie = () => {
         fetch(url)
             .then((resp) => resp.json())
             .then((data) => {
-                // If movie exists in the database
+                // If the movie exists in the database
                 if (data.Response == "True") {
                     result.innerHTML = `
                         <div class="info">
@@ -72,7 +72,7 @@ window.addEventListener("load", getMovie);
 
 function getMovieTrailer(movieTitle) {
     // Fetch the movie trailer from YouTube API
-    fetch(`https://www.googleapis.com/youtube/v3/search?q=${movieTitle} trailer&key=${YOUTUBEAPIKEY}&type=video`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?q=${movieTitle} trailer&key=${youtubeApiKey}&type=video`)
         .then((resp) => resp.json())
         .then((data) => {
             if (data.items.length > 0) {

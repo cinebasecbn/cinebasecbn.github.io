@@ -58,6 +58,22 @@ let getMovie = () => {
     }
 };
 
+// Event listener for the contact button
+document.getElementById("contact-btn").addEventListener("click", () => {
+    // Increment the email counter
+    counter++;
+
+    // Compose the email subject and body
+    const subject = "Question For CineBase";
+    const emailBody = `#${counter} emails were sent.`;
+
+    // Compose the email link with recipient, subject, and body
+    const emailLink = `mailto:cinebasecbd@hotmail.com?subject=${subject}&body=${emailBody}`;
+
+    // Open the default email client
+    window.location.href = emailLink;
+});
+
 searchBtn.addEventListener("click", getMovie);
 movieNameRef.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {

@@ -167,3 +167,25 @@ p{
 #trailer-btn:hover {
     background-color: #ff9900; /* Change the background color on hover */
 }
+
+/* Style for the contact button */
+.rounded-button {
+    position: absolute;
+    bottom: 1em; /* Adjust the bottom distance as needed */
+    right: 1em; /* Adjust the right distance as needed */
+    background-color: #ffb92a;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    padding: 1em; /* Ensure it's fully rounded */
+    border-radius: 50%; /* Makes it fully rounded */
+    font-weight: 600;
+    transition: background-color 0.3s;
+    z-index: 1; /* Ensures it's above other content */
+}
+
+/* Style for the icon inside the contact button */
+.rounded-button i {
+    font-size: 1em; /* Adjust the icon size */
+    margin: 0; /* Remove any default margins */
+}

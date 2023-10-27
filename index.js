@@ -70,8 +70,8 @@ document.getElementById("contact-btn").addEventListener("click", () => {
     // Compose the email link with recipient, subject, and body
     const emailLink = `mailto:cinebasecbd@hotmail.com?subject=${subject}&body=${emailBody}`;
 
-    // Open the default email client
-    window.location.href = emailLink;
+    // Open the email client in a new window
+    window.open(emailLink);
 });
 
 searchBtn.addEventListener("click", getMovie);

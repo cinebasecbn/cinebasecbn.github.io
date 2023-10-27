@@ -2,15 +2,11 @@ let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
-// Access the GitHub secrets
-const key = process.env.KEY; // Access your OMDB API key from secrets
-const youtubeApiKey = process.env.YOUTUBEAPIKEY; // Access your YouTube API key from secrets
-
 // Function to fetch data from API
 let getMovie = () => {
     let movieName = movieNameRef.value;
     let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
-
+    
     // If input field is empty
     if (movieName.length <= 0) {
         result.innerHTML = `<h3 class="msg">Please enter a movie name</h3>`;
@@ -18,7 +14,7 @@ let getMovie = () => {
         fetch(url)
             .then((resp) => resp.json())
             .then((data) => {
-                // If the movie exists in the database
+                // If movie exists in the database
                 if (data.Response == "True") {
                     result.innerHTML = `
                         <div class="info">
@@ -45,7 +41,7 @@ let getMovie = () => {
                         <p>${data.Actors}</p>
                         <button id="trailer-btn">Watch Trailer</button>
                     `;
-
+                    
                     // Add a click event listener to the "Watch Trailer" button
                     let trailerBtn = document.getElementById("trailer-btn");
                     trailerBtn.addEventListener("click", () => {

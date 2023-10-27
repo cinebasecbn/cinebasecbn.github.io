@@ -5,7 +5,7 @@ let result = document.getElementById("result");
 // Function to fetch data from API
 let getMovie = () => {
     let movieName = movieNameRef.value;
-    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${چابی}`;
+    let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
     
     // If input field is empty
     if (movieName.length <= 0) {
@@ -68,7 +68,7 @@ window.addEventListener("load", getMovie);
 
 function getMovieTrailer(movieTitle) {
     // Fetch the movie trailer from YouTube API
-    fetch(`https://www.googleapis.com/youtube/v3/search?q=${movieTitle} trailer&key=${یوٹیوب}&type=video`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?q=${movieTitle} trailer&key=${youtubeApiKey}&type=video`)
         .then((resp) => resp.json())
         .then((data) => {
             if (data.items.length > 0) {

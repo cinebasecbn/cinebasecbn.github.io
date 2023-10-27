@@ -2,6 +2,10 @@ let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
+// Access the GitHub secrets
+const key = process.env.KEY;
+const youtubeApiKey = process.env.YOUTUBEAPIKEY;
+
 // Function to fetch data from API
 let getMovie = () => {
     let movieName = movieNameRef.value;

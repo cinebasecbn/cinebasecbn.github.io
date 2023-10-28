@@ -60,7 +60,7 @@ let getMovies = () => {
   window.addEventListener("load", getMovies);
   
   function getMovie(movieTitle) {
-    let url = `http://www.omdbapi.com/?t=${movieTitle}&apikey=${key}`;
+    let url = `https://www.omdbapi.com/?t=${movieTitle}&apikey=${key}`;
     
     fetch(url)
       .then((response) => response.json())

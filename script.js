@@ -73,8 +73,10 @@ function displayMovieDetails(details) {
             <li class="rated">
                 <img src="star-icon.svg">
                 <span>Ratings: ${details.imdbRating}</span>
+                <img src="star-icon.svg">
             </li>
             <li class="released">Released: ${details.Released}</li>
+            <li class="duration">Duration: ${details.Runtime}</li>
         </ul>
         <p class="genre"><b>Genre:</b> ${details.Genre}</p>
         <p class="writer"><b>Writer:</b> ${details.Writer}</p>

@@ -191,6 +191,7 @@ img{
 }
 .movie-info .year{
     font-weight: 500;
+    padding: 5px;
 }
 .movie-info .rated{
     font-weight: 500;
@@ -198,21 +199,28 @@ img{
     padding: 5px;
 }
 .movie-info .rated img{
-    width: 1.3em;
+    width: 1.7em;
     padding-right: 5px;
+    padding-left: 5px;
 }
 .movie-info .released{
     font-weight: 500;
+    padding: 5px;
+}
+.movie-info .duration{
+    font-weight: 500;
+    padding: 5px;
 }
 .movie-info .writer{
     padding: 0.5rem;
     margin: 1rem 0;
 }
-.movie-info .genre{
-    background-color: var(--light-dark-color);
-    display: inline-block;
+
+.movie-info .genre {
     padding: 0.5rem;
-    border-radius: 3px;
+    margin: 1rem 0;
+    text-align: left; /* Align the text to the center */
+    padding-left: 0px;
 }
 .movie-info .plot{
     max-width: 400px;

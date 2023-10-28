@@ -140,24 +140,6 @@ let getMovies = () => {
       });
   }
   
-  function getMovieYouTube(movieTitle) {
-    // Search for the movie on YouTube
-    fetch(`https://www.googleapis.com/youtube/v3/search?q=${movieTitle}&key=${youtubeApiKey}&type=video`)
-      .then((resp) => resp.json())
-      .then((data) => {
-        if (data.items.length > 0) {
-          const videoId = data.items[0].id.videoId;
-          const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-          window.open(videoUrl, "_blank");
-        } else {
-          alert("No YouTube video found for this movie");
-        }
-      })
-      .catch(() => {
-        alert("Failed to fetch YouTube video");
-      });
-  }
-  
   function openTrailerFullscreen(trailerUrl) {
     // Open the trailer in fullscreen
     window.open(trailerUrl, "_blank", "fullscreen=yes");

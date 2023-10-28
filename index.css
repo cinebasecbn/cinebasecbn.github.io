@@ -59,6 +59,27 @@ body{
     color: #fff;
 }
 
+/* Add styles for each movie result */
+.movie-title {
+    border: 1px solid #a0a0a0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Add a hover effect for movie results */
+.movie-title:hover {
+    background-color: #3a3a3a;
+    padding: 0.7em;
+}
+
 .info{
     position: relative;
     display: grid;
@@ -165,5 +186,21 @@ p{
 }
 
 #trailer-btn:hover {
+    background-color: #ff9900; /* Change the background color on hover */
+}
+/* Add this CSS for the "Watch Trailer" button */
+#imdb-btn {
+    background-color: #ffb92a; /* Match the button's background color to the search button */
+    border: none;
+    cursor: pointer;
+    color: #000; /* Text color */
+    padding: 0.7em 1.5em; /* Adjust padding for better button size */
+    border-radius: 0.3em;
+    font-weight: 600; /* Make text bold */
+    margin-top: 1em; /* Adjust margin for spacing */
+    transition: background-color 0.3s; /* Add a smooth transition on hover */
+}
+
+#idmb-btn:hover {
     background-color: #ff9900; /* Change the background color on hover */
 }

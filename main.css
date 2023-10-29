@@ -216,12 +216,13 @@ img{
     margin: 1rem 0;
 }
 
-.movie-info .genre {
+.movie-info .genre{
+    background-color: var(--light-dark-color);
+    display: inline-block;
     padding: 0.5rem;
-    margin: 1rem 0;
-    text-align: left; /* Align the text to the center */
-    padding-left: 0px;
+    border-radius: 3px;
 }
+
 .movie-info .plot{
     max-width: 400px;
     margin: 1rem auto;

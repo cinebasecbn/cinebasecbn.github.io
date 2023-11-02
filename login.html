@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="cinebase.ico">
+    <title>Login - CineBase</title>
+	
+    <!-- Add these meta tags for iOS and Android home screen functionality -->
+    <link rel="apple-touch-icon" href="cinebase.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: var(--md-dark-color);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+		
+		/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+		left: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+	right: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+.logo nav ul li {
+    margin-right: 20px;
+	right: 200px;
+}
+
+.logo nav ul li a {
+    font-size: 1rem;
+    color: var(--yellow-color);
+    font-weight: bold;
+    text-decoration: none; /* Add this to remove underlines from links */
+}
+
+/* Add styles for the active link if needed */
+.logo nav ul li a:hover {
+    color: #fff; /* Change the color when hovering over a link */
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between; /* Adjust the alignment to move "CineBase" and the navigation menu side by side */
+    padding: 5rem 0;
+	align-items: center;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo p span {
+    color: var(--yellow-color);
+}
+
+.logo {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo p span {
+    color: var(--yellow-color);
+}
+
+        h2 {
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #fff;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: var(--yellow-color);
+            color: #000;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff9900b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="logo">
+            <a href="index.html">
+                <div class="container">
+                    <p>Cine<span>Base</span></p>
+                </div>
+            </a>
+			    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+        </div>
+    <div class="login-container">
+        <h2>Login for Developers</h2>
+        <form action="developer.html" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Login">
+			<p id="error-message" style="color: red;"></p>
+        </form>
+    </div>
+</body>
+<script>
+    // Function to handle form submission
+    function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the username and password input fields
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        // Get the error message element
+        const errorMessage = document.getElementById('error-message');
+
+        // Check if the username and password match
+        if (usernameInput.value.trim() === 'CineBase-Admin' && passwordInput.value.trim() === 'CineBase-Admin') {
+            errorMessage.textContent = ''; // Clear any previous error messages
+            // Display a success message
+            errorMessage.style.color = 'green';
+            errorMessage.textContent = 'Login successful. Redirecting...';
+
+            // You can add a delay before redirecting if desired
+            setTimeout(() => {
+                window.location.href = 'developer.html';
+            }, 2000); // Redirect after 2 seconds (2000 milliseconds)
+        } else {
+            // Display an error message
+            errorMessage.style.color = 'red';
+            errorMessage.textContent = 'Invalid username or password. Please try again.';
+        }
+    }
+
+    // Add an event listener to the form for form submission
+    const loginForm = document.querySelector('form');
+    loginForm.addEventListener('submit', handleFormSubmit);
+</script>
+</html>

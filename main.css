@@ -45,16 +45,73 @@ img{
         -ms-flex-pack: center;
             justify-content: center;
 }
-.logo{
-    padding: 1rem 0;
+/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+		left: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+	right: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+.logo nav ul li {
+    margin-right: 20px;
+	right: 200px;
+}
+
+.logo nav ul li a {
+    font-size: 1rem;
+    color: var(--yellow-color);
+    font-weight: bold;
+    text-decoration: none; /* Add this to remove underlines from links */
+}
+
+/* Add styles for the active link if needed */
+.logo nav ul li a:hover {
+    color: #fff; /* Change the color when hovering over a link */
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between; /* Adjust the alignment to move "CineBase" and the navigation menu side by side */
+    padding: 5rem 0;
+	align-items: center;
     border-bottom: 1px solid var(--light-dark-color);
 }
-.logo p{
+
+.logo p {
     font-size: 2rem;
     color: #fff;
     font-weight: bold;
 }
-.logo p span{
+
+.logo p span {
+    color: var(--yellow-color);
+}
+
+.logo {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo p span {
     color: var(--yellow-color);
 }
 .search-element{

@@ -1,0 +1,124 @@
+/* Add specific styles for developer.html */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+		left: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+/* Style for the navigation menu ul */
+.logo nav ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+	right: 200px;
+    display: flex;
+    align-items: center; /* Center vertically within the nav */
+}
+
+.logo nav ul li {
+    margin-right: 20px;
+	right: 200px;
+}
+
+.logo nav ul li a {
+    font-size: 1rem;
+    color: var(--yellow-color);
+    font-weight: bold;
+    text-decoration: none; /* Add this to remove underlines from links */
+}
+
+/* Add styles for the active link if needed */
+.logo nav ul li a:hover {
+    color: #fff; /* Change the color when hovering over a link */
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between; /* Adjust the alignment to move "CineBase" and the navigation menu side by side */
+    padding: 5rem 0;
+	align-items: center;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo p span {
+    color: var(--yellow-color);
+}
+
+.logo {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-dark-color);
+}
+
+.logo p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo p span {
+    color: var(--yellow-color);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie-item {
+    background-color: var(--md-dark-color);
+    color: #fff;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.movie-item img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.movie-year {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* Add any additional styles specific to your developer.html content as needed */
